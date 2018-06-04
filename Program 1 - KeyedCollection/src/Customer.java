@@ -1,7 +1,6 @@
 /**
- * 
+ * Class used for Customer Object with data from customers.txt
  * @author Ian Spryn
- *
  */
 public class Customer {
 	//add private members here

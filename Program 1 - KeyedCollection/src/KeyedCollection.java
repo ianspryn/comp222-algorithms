@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * 
+ * Creates ArrayLists to hold keys and data and allows for insertion of new data and converting to a string output
  * @author Ian Spryn
  *
  * @param <K> the type used for keys in this collection
@@ -10,7 +10,6 @@ import java.util.Iterator;
  */
 public class KeyedCollection<K, T> {
 	//add private members here
-	//private KeyedCollection<K, T> collection;
 	private ArrayList<K> key;
 	private ArrayList<T> data;
 	
@@ -18,7 +17,6 @@ public class KeyedCollection<K, T> {
 	 * Create an empty collection
 	 */
 	public KeyedCollection() {
-		//collection = new KeyedCollection<K, T>();
 		key = new ArrayList<K>();
 		data = new ArrayList<T>();
 	}
@@ -38,9 +36,10 @@ public class KeyedCollection<K, T> {
 	 * @param data the corresponding data to add to the collection
 	 */
 	public void insert(K key, T data) {
-		//collection.insert(key, data);	
-		this.key.add(key);
-		this.data.add(data);
+		if (!this.key.contains(key)) {
+			this.key.add(key);
+			this.data.add(data);	
+		}
 	}
 	
 	/**

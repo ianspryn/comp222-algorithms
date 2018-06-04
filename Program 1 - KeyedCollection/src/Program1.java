@@ -4,8 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
 
 /**
+ * Opens the file customers.txt, creates a new KeyedCollection Object, reads through the file, and prints the collection.
  * @author Ian Spryn
- *
  */
 public class Program1 {
 

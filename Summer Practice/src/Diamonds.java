@@ -1,27 +1,19 @@
 import java.util.*;
 
 public class Diamonds {
-	
-	static int[][] matrix;
-	
 	public static void main(String[] args) {
+		
 		Scanner scnr = new Scanner(System.in);
 		System.out.println("Enter matrix size");
 		int n = scnr.nextInt();
+		Matrix m1 = new Matrix(n);
+		Random rand = new Random();
+		//Set a random matrix value to 1
+		m1.matrix[rand.nextInt(n)][rand.nextInt(n)] = 1;
 		
-		matrix = new int[n][n]; 
+		System.out.println(m1.matrix.toString());
 		
-		generateGrid(n);
-		
-		System.out.println(Arrays.deepToString(matrix));
 	}
 
-	/**
-	 * 
-	 * @param n to define the size of the n by n matrix
-	 */
-	public static void generateGrid(int n) {
-		Random rand = new Random();
-		matrix[rand.nextInt(n)][rand.nextInt(n)] = 1;
-	}
+	
 }
